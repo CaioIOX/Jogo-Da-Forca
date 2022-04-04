@@ -1,5 +1,6 @@
 package com.jogodaforca.gameart
 
+// As funções do package gameArt informam visualmente o estado do jogo e são chamadas pela função printGameStatus
 fun printNoMistakes() {
     println("  |------|-")
     println("  |/     | ")

@@ -1,7 +1,10 @@
 import kotlin.random.Random
 import com.jogodaforca.gameart.*
 
+// Lista de palavras usadas no jogo:
 val words = arrayListOf("acnes","adubo","bobos","brota","camas","chuca","datas","durex","eixos","ermos","fadas","falta","gagos","galha","ileal","imite","jeque","julga","laica","laser","magda","mambo","nafta","nadei","odiei","ogros","pague","panca","queto","quote","rabos","raiou","sacou","salve","tacos","talos","uivar","ungir","varre","vasco","xerox","zarpe",)
+
+//Preparação de variaveis que serão utilizadas em todas as funções
 var word = ""
 val guesses = arrayListOf<Char>()
 var remainingGuesses = 6
@@ -10,7 +13,11 @@ var mistakes = 0
 fun main(args: Array<String>) {
     setup()
 }
+
+// A função setup possui toda a configuração do jogo.
 fun setup() {
+
+    // O programa escolherá uma palavra aleatoria dentre a lista de palavras.
     val wordIndex = Random.nextInt(words.size)
     word = words[wordIndex].uppercase()
 
@@ -19,6 +26,10 @@ fun setup() {
 
     var gameOver = false
 
+    /*  O loop do while recebe a letra informada pelo usuario
+        Verifica se ela existe na palavra escolhida aleatoriamente
+        e por fim informa ao usuario se a letra existe ou não na palavra.
+     */
     do {
         printGameStatus()
         println("Tente uma letra:")
@@ -56,6 +67,9 @@ fun setup() {
 
     }
 }
+/*  A função printGameStatus verifica qual o estado atual do jogo e imprime
+    para o usuario o visual delimitado pelas funções do gameArt
+*/
 fun printGameStatus(){
     when (mistakes){
         0-> printNoMistakes()
