@@ -1,5 +1,5 @@
 # Jogo-Da-Forca
-Projeto de jogo da forca(Hangman) em Kotlin
+Projeto de jogo da forca (Hangman) em Kotlin
 
 Regras do jogo:
 
