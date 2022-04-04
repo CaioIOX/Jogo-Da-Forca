@@ -62,7 +62,7 @@ fun setup() {
         printGameStatus()
         println("Você perdeu! A palavra era: $word")
     }else {
-        println("Parebén, você venceu!!")
+        println("Parebéns, você venceu!!")
         println("A palavra era: $word")
 
     }
